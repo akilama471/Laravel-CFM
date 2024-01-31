@@ -37,6 +37,7 @@ class ComposerStaticInit92eff24a6ac5949be1ae03e1748b28d9
         'ce9671a430e4846b44e1c68c7611f9f5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        'd1661eee51f445744684bc596e61def0' => __DIR__ . '/..' . '/spatie/laravel-csp/src/helpers.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
     );
@@ -88,9 +89,11 @@ class ComposerStaticInit92eff24a6ac5949be1ae03e1748b28d9
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Spatie\\Permission\\' => 18,
+            'Spatie\\LaravelPackageTools\\' => 27,
             'Spatie\\LaravelIgnition\\' => 23,
             'Spatie\\Ignition\\' => 16,
             'Spatie\\FlareClient\\' => 19,
+            'Spatie\\Csp\\' => 11,
             'Spatie\\Backtrace\\' => 17,
         ),
         'R' => 
@@ -322,6 +325,10 @@ class ComposerStaticInit92eff24a6ac5949be1ae03e1748b28d9
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-permission/src',
         ),
+        'Spatie\\LaravelPackageTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-package-tools/src',
+        ),
         'Spatie\\LaravelIgnition\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
@@ -333,6 +340,10 @@ class ComposerStaticInit92eff24a6ac5949be1ae03e1748b28d9
         'Spatie\\FlareClient\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/flare-client-php/src',
+        ),
+        'Spatie\\Csp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-csp/src',
         ),
         'Spatie\\Backtrace\\' => 
         array (
@@ -5348,6 +5359,21 @@ class ComposerStaticInit92eff24a6ac5949be1ae03e1748b28d9
         'Spatie\\Backtrace\\CodeSnippet' => __DIR__ . '/..' . '/spatie/backtrace/src/CodeSnippet.php',
         'Spatie\\Backtrace\\File' => __DIR__ . '/..' . '/spatie/backtrace/src/File.php',
         'Spatie\\Backtrace\\Frame' => __DIR__ . '/..' . '/spatie/backtrace/src/Frame.php',
+        'Spatie\\Csp\\AddCspHeaders' => __DIR__ . '/..' . '/spatie/laravel-csp/src/AddCspHeaders.php',
+        'Spatie\\Csp\\CspServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-csp/src/CspServiceProvider.php',
+        'Spatie\\Csp\\Directive' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Directive.php',
+        'Spatie\\Csp\\Exceptions\\InvalidCspPolicy' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Exceptions/InvalidCspPolicy.php',
+        'Spatie\\Csp\\Exceptions\\InvalidDirective' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Exceptions/InvalidDirective.php',
+        'Spatie\\Csp\\Exceptions\\InvalidValueSet' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Exceptions/InvalidValueSet.php',
+        'Spatie\\Csp\\Exceptions\\MissingCspMetaTagPolicy' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Exceptions/MissingCspMetaTagPolicy.php',
+        'Spatie\\Csp\\Keyword' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Keyword.php',
+        'Spatie\\Csp\\Nonce\\NonceGenerator' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Nonce/NonceGenerator.php',
+        'Spatie\\Csp\\Nonce\\RandomString' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Nonce/RandomString.php',
+        'Spatie\\Csp\\Policies\\Basic' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Policies/Basic.php',
+        'Spatie\\Csp\\Policies\\Policy' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Policies/Policy.php',
+        'Spatie\\Csp\\PolicyFactory' => __DIR__ . '/..' . '/spatie/laravel-csp/src/PolicyFactory.php',
+        'Spatie\\Csp\\Scheme' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Scheme.php',
+        'Spatie\\Csp\\Value' => __DIR__ . '/..' . '/spatie/laravel-csp/src/Value.php',
         'Spatie\\FlareClient\\Api' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Api.php',
         'Spatie\\FlareClient\\Concerns\\HasContext' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Concerns/HasContext.php',
         'Spatie\\FlareClient\\Concerns\\UsesTime' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Concerns/UsesTime.php',
@@ -5499,6 +5525,10 @@ class ComposerStaticInit92eff24a6ac5949be1ae03e1748b28d9
         'Spatie\\LaravelIgnition\\Support\\StringComparator' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/StringComparator.php',
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
         'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
+        'Spatie\\LaravelPackageTools\\Commands\\InstallCommand' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Commands/InstallCommand.php',
+        'Spatie\\LaravelPackageTools\\Exceptions\\InvalidPackage' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Exceptions/InvalidPackage.php',
+        'Spatie\\LaravelPackageTools\\Package' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Package.php',
+        'Spatie\\LaravelPackageTools\\PackageServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/PackageServiceProvider.php',
         'Spatie\\Permission\\Commands\\CacheReset' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CacheReset.php',
         'Spatie\\Permission\\Commands\\CreatePermission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreatePermission.php',
         'Spatie\\Permission\\Commands\\CreateRole' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreateRole.php',
