@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+        "material-icon-theme.folders.associations": {
+            "components/common" : "Tools",
+            "components/navbar" : "Tools",
+            "components/sidemenu" : "Tools",
+        }
+	}
+}

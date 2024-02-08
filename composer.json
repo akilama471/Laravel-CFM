@@ -11,9 +11,11 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "spatie/laravel-csp": "^2.8",
+        "spatie/laravel-html": "^3.4",
         "spatie/laravel-permission": "^6.3"
     },
     "require-dev": {
+        "enlightn/enlightn": "*",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
