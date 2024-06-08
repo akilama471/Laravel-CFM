@@ -7,7 +7,7 @@ return [
      * any class that extends `Spatie\Csp\Policies\Policy`
      */
     //'policy' => Spatie\Csp\Policies\Basic::class,
-    'policy' => App\Support\CspPolicy::class,
+    'policy' => App\Policy\CspPolicy::class,
 
     /*
      * This policy which will be put in report only mode. This is great for testing out

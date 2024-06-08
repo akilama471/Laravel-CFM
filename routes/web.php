@@ -9,6 +9,8 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\FormEditor\FormEditorController;
+use App\Http\Controllers\Module\MembersController;
 use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +27,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AuthenticatedSessionController::class, 'create']);
 
-Route::get('/dashboard', function () {return view('pages.dashboard');})->middleware(['auth', 'verified', 'preventBackHistory'])->name('dashboard');
+/** System Routes */
+Route::get('/dashboard', function () {return view('pages.dashboard');})->middleware(['auth', 'verified', 'preventBackHistory'])->name('system.dashboard');
+
+/** Members Routes */
+Route::controller(MembersController::class)->middleware(['auth', 'preventBackHistory'])->group(function () {
+    Route::get('/members/', function () {return view('pages.members.dashboard');})->name('MembersController.members');
+    Route::get('/members/view', function () {return view('pages.members.view');})->name('MembersController.members.view');
+    Route::get('/members/add', function () {return view('pages.members.add');})->name('MembersController.members.add');
+    Route::post('/members/create', 'store')->name('MembersController.store');
+});
+
+/** Form Editor Routes */
+Route::controller(FormEditorController::class)->middleware(['auth', 'preventBackHistory'])->group(function () {
+    Route::get('settings/form-editor', 'index')->name('FormEditorController.index');
+});
 
 Route::middleware(['guest', 'preventBackHistory'])->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])->name('register_view');

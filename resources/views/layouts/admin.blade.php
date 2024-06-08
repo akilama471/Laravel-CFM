@@ -1,4 +1,4 @@
-@props(['selected_menu'])
+@props(['selected_menu','selected_group'])
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,21 +11,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon-16x16.png')}}">
 
-    <title>Staff Management System | {{ $title ?? '' }}</title>
+    <title>{{ $sectiontitle ?? '' }} | Church Management System</title>
 
     <!-- Header section -->
     @include('include.header')
 </head>
 
-<body class="hold-transition sidebar-mini layout-navbar-fixed">
+<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed">
     <div class="wrapper">
 
         <!-- Navigation Menu section -->
-        @include('include.navigation')
-
-
+        <x-section.navbar/>
         <!-- Side Menu section -->
-        <x-sidemenu active_menu='{{ $selected_menu }}'/>
+        <x-section.sidemenu active_group="{{$selected_group ?? ''}}" active_menu='{{ $selected_menu }}' />
 
 
         <div class="content-wrapper">
@@ -35,13 +33,6 @@
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <h1>{{ $sectiontitle ?? ''  }}</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Module</a></li>
-                                <li class="breadcrumb-item active">{{ $sectiontitle ?? ''  }}</li>
-                            </ol>
                         </div>
                     </div>
                 </div>
@@ -75,7 +66,7 @@
         </div>
 
         <!-- Footer section -->
-        @include('include.footer')
+        <x-section.footer/>
 
     </div>
 

@@ -1,6 +1,6 @@
-<x-admin-layout selected_menu='dashboard'>
+<x-admin-layout selected_group='members' selected_menu='members_view'>
     <x-slot:sectiontitle>
-        Dashboard
+        Members
     </x-slot:sectiontitle>
     <div class="row">
         <div class="col-12">

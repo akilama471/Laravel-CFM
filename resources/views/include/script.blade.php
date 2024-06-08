@@ -1,7 +1,9 @@
 <script nonce="{{ csp_nonce() }}" src="{{ asset('assets/plugins/jquery/jquery.min.js')}}"></script>
 <script nonce="{{ csp_nonce() }}" src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.js')}}"></script>
+<script nonce="{{ csp_nonce() }}" src="{{ asset('assets/plugins/moment/moment.min.js')}}"></script>
 <script nonce="{{ csp_nonce() }}" src="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 <script nonce="{{ csp_nonce() }}" src="{{ asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+<script nonce="{{ csp_nonce() }}" src="{{ asset('assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.js')}}"></script>
 @stack('script-include')
 <script nonce="{{ csp_nonce() }}" src="{{ asset('assets/dist/js/adminlte.js')}}"></script>
 
@@ -23,6 +25,11 @@
             overflowBehavior: {
                 x: 'hidden',
             }
+        });
+
+        $('.datenowPicker').datetimepicker({
+            format: 'YYYY-MM-DD',
+            date: new Date(),
         });
     })
 </script>
